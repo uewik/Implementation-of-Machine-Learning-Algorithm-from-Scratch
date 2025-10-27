@@ -165,7 +165,7 @@ So, our equation changes form finding a Max to Min, now we can solve this using 
 
 Our Optimizer tries to minimize the loss function of our sigmoid, by loss function I mean, it tries to minimize the error made by our model, and eventually finds a Hyper-Plane which has the lowest error. The loss function has the below equation: 
 
-$[y*log(y_p) + (i - y)*log(1 - y_p)]$
+$[y*log(y_p) + (1 - y)*log(1 - y_p)]$
 
 where,
 y = actual class value of a data point <br>
@@ -347,3 +347,4 @@ plt.show()
 ```
 print(classification_report(y, model.predict(X)))
 ```
+
