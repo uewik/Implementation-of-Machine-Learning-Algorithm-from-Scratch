@@ -163,7 +163,7 @@ isOptimal = True
 for centroid in self.centroids:
     original_centroid = previous[centroid]
     curr = self.centroids[centroid]
-    if np.sum((curr - original_centroid)/original_centroid * 100.0) > self.tolerance:
+    if np.sum(np.abs(curr - original_centroid)/original_centroid * 100.0) > self.tolerance:
         isOptimal = False
 if isOptimal:
     break
@@ -259,3 +259,4 @@ The Elbow method is based on the principle that **“Sum of squares of distances
 - K means has problems when data contains outliers
 - As the number of dimensions increases, the difficulty in getting the algorithm to converge increases due to the curse of dimensionality
 - If there is overlapping between clusters, k-means doesn’t have an intrinsic measure for uncertainty
+
